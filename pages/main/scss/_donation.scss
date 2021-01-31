@@ -1,0 +1,145 @@
+.donation {
+    background-color: $color-light-l;
+    padding-top: 8.1rem;
+    padding-bottom: 10rem;
+
+    &__img {
+        margin-right: 3rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        max-width: 38rem;
+    }
+
+    &__title {
+        @include h3-text;
+        text-align: left;
+        margin-bottom: 2rem;
+        max-width: 30rem;
+        letter-spacing: 2.2px;
+    }
+
+    &__subtitle {
+        font-family: Georgia;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 110%;
+        color: $color-dark-l;
+        margin-bottom: 2rem;
+        letter-spacing: 0.9px;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 1rem 1.5rem 1rem 6rem;
+        margin-bottom: 2rem;
+        background-color: $color-primary;
+        font-family: Georgia;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 115%;
+        color: $color-dark-l;
+        border-radius: 0.9rem;
+        letter-spacing: 1.2px;
+        transition: all .2s;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 3rem;
+            height: 2.3rem;
+            position: absolute;
+            left: 14px;
+            background-image: url("../../../assets/images/credit-card.svg");
+        }
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
+    }
+
+    &__text {
+        font-family: Arial;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        color: $color-dark-m;
+    }
+}
+
+.donation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1279px) {
+    .donation-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .donation__content {
+        margin-bottom: 6rem;
+    }
+
+    .donation__img {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .donation {
+        padding-top: 4.2rem;
+        padding-bottom: 4.2rem;
+
+        &__content {
+            text-align: center;
+            margin-bottom: 4.2rem;
+        }
+
+        &__title {
+            max-width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 0px 40px;
+            letter-spacing: 1.5px;
+        }
+
+        &__subtitle {
+            letter-spacing: 0;
+            line-height: 160%;
+        }
+
+        &__link {
+            font-size: 1.5rem;
+            padding-top: 1.3rem;
+            padding-bottom: 1.3rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.9px;
+
+            &::before {
+                top: 10px;
+            }
+        }
+
+        &__text {
+            text-align: justify;
+            padding: 0 10px;
+        }
+
+        &__img {
+            text-align: center;
+            img {
+                width: 87%;
+            }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.not-only {
+    padding-top: 6rem;
+
+    &__content {
+        padding-top: 16.3rem;
+    }
+
+    &__title {
+        font-family: Georgia;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 4.4rem;
+        line-height: 130%;
+        color: $color-light-xl;
+        max-width: 310px;
+        margin-bottom: 4.2rem;
+    }
+
+    &__text {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 160%;
+        color: $color-dark-s;
+        max-width: 460px;
+        margin-bottom: 4.1rem;
+    }
+
+    &__btn {
+        @include btn;
+    }
+
+    &__link {
+        letter-spacing: 1.07px;
+    }
+
+    &__img {
+    }
+}
+
+.not-only-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1279px) {
+    .not-only-wrapper {
+        flex-direction: column;
+    }
+
+    .not-only__content {
+        padding-top: 0;
+        max-width: 46rem;
+        margin: 0 auto;
+    }
+
+    .not-only__btn-wrapper {
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    .not-only__img {
+        margin-left: 12%;
+        width: 82.8%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .not-only__title {
+        text-align: center;
+        font-size: 2.5rem;
+        letter-spacing: 1.5px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .not-only__text {
+        text-align: center;
+    }
+
+    .not-only__btn-wrapper {
+        margin-bottom: 10.5rem;
+    }
+
+    .not-only__img {
+        margin-left: 13%;
+        width: 87.3%;
+    }
+}
